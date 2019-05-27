@@ -82,7 +82,7 @@ public class ProductController {
     @PostMapping(value = "/Produits")
     public ResponseEntity<Void> ajouterProduit(@Valid @RequestBody Product product) {
 
-    	if(product.getPrixAchat() == 0) {
+    	if(product.getPrix() == 0) {
     		throw new ProduitGratuitException("Le prix de vente du produit doit être different de 0.");
     	}
 
